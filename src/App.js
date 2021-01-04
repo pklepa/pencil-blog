@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { client } from "./client";
+import { format } from "date-fns";
+
 import "./assets/styles/reset.css";
 import "./assets/styles/global.css";
 
@@ -57,6 +59,23 @@ function App() {
           </div>
         </main>
       </div>
+
+      <footer>
+        <div className="container footer-container">
+          <p>Design by @{format(new Date(), "yyyy")} Logworks.</p>
+          <div className="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <p>
+            Made by{" "}
+            <a href="https://github.com/pklepa" target="_blank">
+              pklepa
+            </a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
