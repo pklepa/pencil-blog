@@ -1,8 +1,11 @@
 import React from "react";
+import { format } from "date-fns";
 import Button from "../Button/Button";
 import "./Card.css";
 
-function Card({ size, title, imgUrl, tag, content, date }) {
+function Card({ size, title, imgUrl, tag, content, author, date }) {
+  const formattedDate = format(new Date(date), "MMMM d, yyyy");
+
   return (
     <div className={`card ${size && size === "large" ? "large-card" : ""}`}>
       <div
@@ -18,7 +21,7 @@ function Card({ size, title, imgUrl, tag, content, date }) {
         <p className="content-preview">{content}</p>
 
         <span className="post-details">
-          Posted by <strong>Eugenia</strong>, on July 24, 2019
+          Posted by <strong>{author}</strong>, on {formattedDate}
         </span>
 
         <Button>Continue reading</Button>

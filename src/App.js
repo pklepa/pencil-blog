@@ -14,9 +14,9 @@ function App() {
 
   useEffect(() => {
     client
-      .getEntries()
+      .getEntries({ content_type: "blogPost" })
       .then((response) => {
-        console.log(response);
+        console.log("response >> ", response);
         setArticles(response.items);
       })
       .catch(console.error);
@@ -40,6 +40,7 @@ function App() {
             imgUrl={tmp.featuredImage.fields.file.url}
             tag={tmp.category[0]}
             content={tmp.content}
+            author={tmp.author.fields.name}
             date={articles[0].sys.createdAt}
           />
         )}

@@ -56,4 +56,8 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.card-details .post-details {
+  font-size: 12px;
+}
 /*# sourceMappingURL=Card.css.map */
