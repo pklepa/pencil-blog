@@ -1,10 +1,25 @@
 .App {
   min-height: 100vh;
   width: 100%;
-  background-color: bisque;
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #666;
+  font: normal 14px "Mulish";
+  line-height: 1.5em;
 }
 
-a {
-  text-decoration: none;
+.container {
+  max-width: 1200px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 /*# sourceMappingURL=global.css.map */

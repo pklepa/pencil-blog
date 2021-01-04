@@ -1,9 +1,21 @@
+@import "./colors";
+
 .App {
   min-height: 100vh;
   width: 100%;
-  background-color: bisque;
+  background-color: $background;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: $grey;
+  font: normal 14px "Mulish";
+  line-height: 1.5em;
 }
 
-a {
-  text-decoration: none;
+.container {
+  max-width: 1200px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }

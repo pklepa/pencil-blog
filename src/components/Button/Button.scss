@@ -1,0 +1,11 @@
+@import "../../assets/styles/colors";
+
+.btn {
+  background-color: $black;
+  padding: 16px;
+  width: 100%;
+  border: none;
+
+  color: $deep-white;
+  font-weight: 600;
+}

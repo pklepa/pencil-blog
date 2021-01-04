@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
+import { client } from "./client";
 import "./assets/styles/reset.css";
 import "./assets/styles/global.css";
-import { client } from "./client";
+
+import Navbar from "./components/Navbar/Navbar";
+import Main from "./components/Main/Main";
+import Card from "./components/Card/Card";
 
 function App() {
   const [articles, setArticles] = useState([]);
+
+  const [tmp, setTmp] = useState();
 
   useEffect(() => {
     client
@@ -16,11 +22,31 @@ function App() {
       .catch(console.error);
   }, []);
 
+  useEffect(() => {
+    if (articles[0] !== undefined) {
+      setTmp(articles[0].fields);
+    }
+    console.log("tmp >> ", tmp);
+  }, [articles, tmp]);
+
   return (
     <div className="App">
-      <h1>hello mundo</h1>
-      <div className="container">
-        <header>
+      <Navbar />
+
+      <Main>
+        {tmp && (
+          <Card
+            title={tmp.title}
+            imgUrl={tmp.featuredImage.fields.file.url}
+            tag={tmp.category[0]}
+            content={tmp.content}
+            date={articles[0].sys.createdAt}
+          />
+        )}
+      </Main>
+
+      <div className="temp">
+        <main>
           <div className="wrapper">
             <span>React and Contentful</span>
 
@@ -28,9 +54,6 @@ function App() {
               return <h2 key={index}>{article.fields.title}</h2>;
             })}
           </div>
-        </header>
-        <main>
-          <div className="wrapper"></div>
         </main>
       </div>
     </div>
