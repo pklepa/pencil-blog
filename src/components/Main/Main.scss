@@ -33,6 +33,10 @@
     min-height: 620px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
+    & > *:not(:last-child) {
+      margin-bottom: 70px;
+    }
+
     .author-preview {
       display: flex;
       flex-direction: column;
@@ -106,6 +110,30 @@
           &:hover {
             background-size: 24px 24px;
           }
+        }
+      }
+    }
+
+    .sidebar-content {
+      h1 {
+        text-transform: uppercase;
+        color: $black;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .tags-container {
+        --gap: 10px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+        width: calc(100% + var(--gap));
+
+        & > span {
+          margin: var(--gap) 0 0 var(--gap);
+          padding: 10px 12px;
+          background-color: $lighter-grey;
         }
       }
     }

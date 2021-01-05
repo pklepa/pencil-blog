@@ -118,6 +118,19 @@ function App() {
                 </div>
               </div>
             )}
+
+            <div className="sidebar-content">
+              <h1>Tags</h1>
+
+              <div className="tags-container">
+                <span>tag</span>
+                <span>tag</span>
+                <span>tag</span>
+                <span>tag</span>
+                <span>tag</span>
+                <span>tag</span>
+              </div>
+            </div>
           </nav>
         </div>
       </Main>
