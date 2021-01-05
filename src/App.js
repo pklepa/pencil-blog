@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { client } from "./client";
-import { format } from "date-fns";
 
 import "./assets/styles/reset.css";
 import "./assets/styles/global.css";
@@ -8,6 +7,7 @@ import "./assets/styles/global.css";
 import Navbar from "./components/Navbar/Navbar";
 import Main from "./components/Main/Main";
 import Card from "./components/Card/Card";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -46,6 +46,11 @@ function App() {
             date={articles[0].sys.createdAt}
           />
         )}
+
+        <div className="inner-grid">
+          <div className="articles-container"></div>
+          <nav className="side-nav-container"></nav>
+        </div>
       </Main>
 
       <div className="temp">
@@ -60,22 +65,7 @@ function App() {
         </main>
       </div>
 
-      <footer>
-        <div className="container footer-container">
-          <p>Design by @{format(new Date(), "yyyy")} Logworks.</p>
-          <div className="footer-nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-          </div>
-          <p>
-            Made by{" "}
-            <a href="https://github.com/pklepa" target="_blank">
-              pklepa
-            </a>
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
