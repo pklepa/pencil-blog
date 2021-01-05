@@ -2,7 +2,9 @@
 
 .card {
   display: flex;
-  height: 550px;
+  flex-direction: column;
+  height: 620px;
+  min-width: 270px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
   .img-wrapper {
@@ -10,6 +12,16 @@
     background-size: cover;
     background-position: center center;
     flex: 1;
+  }
+
+  &.featured-card {
+    height: 550px;
+    flex-direction: row;
+    width: 100%;
+
+    .card-details {
+      max-width: 300px;
+    }
   }
 }
 
@@ -19,7 +31,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 300px;
+  // max-width: 400px;
   padding: 30px;
 
   & > *:not(:last-child) {

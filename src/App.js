@@ -10,9 +10,7 @@ import Card from "./components/Card/Card";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  const [articles, setArticles] = useState([]);
-
-  const [tmp, setTmp] = useState();
+  const [articles, setArticles] = useState(false);
 
   useEffect(() => {
     client
@@ -24,46 +22,44 @@ function App() {
       .catch(console.error);
   }, []);
 
-  useEffect(() => {
-    if (articles[0] !== undefined) {
-      setTmp(articles[0].fields);
-    }
-    console.log("tmp >> ", tmp);
-  }, [articles, tmp]);
-
   return (
     <div className="App">
       <Navbar />
 
       <Main>
-        {tmp && (
+        {articles && (
           <Card
-            title={tmp.title}
-            imgUrl={tmp.featuredImage.fields.file.url}
-            tag={tmp.category[0]}
-            content={tmp.content}
-            author={tmp.author.fields.name}
+            isFeatured
+            title={articles[0].fields.title}
+            imgUrl={articles[0].fields.featuredImage.fields.file.url}
+            tag={articles[0].fields.category[0]}
+            content={articles[0].fields.content}
+            author={articles[0].fields.author.fields.name}
             date={articles[0].sys.createdAt}
           />
         )}
 
         <div className="inner-grid">
-          <div className="articles-container"></div>
+          <div className="articles-container">
+            {articles &&
+              articles.map((article, index) => {
+                return (
+                  index > 0 && (
+                    <Card
+                      title={article.fields.title}
+                      imgUrl={article.fields.featuredImage.fields.file.url}
+                      tag={article.fields.category[0]}
+                      content={article.fields.content}
+                      author={article.fields.author.fields.name}
+                      date={article.sys.createdAt}
+                    />
+                  )
+                );
+              })}
+          </div>
           <nav className="side-nav-container"></nav>
         </div>
       </Main>
-
-      <div className="temp">
-        <main>
-          <div className="wrapper">
-            <span>React and Contentful</span>
-
-            {articles.map((article, index) => {
-              return <h2 key={index}>{article.fields.title}</h2>;
-            })}
-          </div>
-        </main>
-      </div>
 
       <Footer />
     </div>

@@ -20,18 +20,15 @@
 }
 
 .inner-grid .articles-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(270px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 600px;
+  gap: 30px;
   margin-right: 30px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .inner-grid .side-nav-container {

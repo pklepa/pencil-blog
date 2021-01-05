@@ -16,13 +16,12 @@
   margin-top: 60px;
 
   .articles-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     align-items: center;
+    gap: 30px;
 
-    min-height: 600px;
     margin-right: 30px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }
 
   .side-nav-container {

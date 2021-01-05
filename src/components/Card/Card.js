@@ -3,11 +3,11 @@ import { format } from "date-fns";
 import Button from "../Button/Button";
 import "./Card.css";
 
-function Card({ size, title, imgUrl, tag, content, author, date }) {
+function Card({ isFeatured, title, imgUrl, tag, content, author, date }) {
   const formattedDate = format(new Date(date), "MMMM d, yyyy");
 
   return (
-    <div className={`card ${size && size === "large" ? "large-card" : ""}`}>
+    <div className={`card ${isFeatured && "featured-card"}`}>
       <div
         className="img-wrapper"
         style={{ backgroundImage: `url("${imgUrl}")` }}
