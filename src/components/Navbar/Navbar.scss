@@ -35,3 +35,21 @@
     }
   }
 }
+
+@media screen and (max-width: 850px) {
+  .navbar .container {
+    grid-template-columns: auto 1fr;
+  }
+
+  .empty {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 16px;
+  }
+
+  .nav .nav-item:not(:first-child) {
+    margin-left: 16px;
+  }
+}

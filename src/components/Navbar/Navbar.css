@@ -44,4 +44,20 @@
 .nav .nav-item:not(:first-child) {
   margin-left: 36px;
 }
+
+@media screen and (max-width: 850px) {
+  .navbar .container {
+    -ms-grid-columns: auto 1fr;
+        grid-template-columns: auto 1fr;
+  }
+  .empty {
+    display: none;
+  }
+  .logo {
+    margin-left: 16px;
+  }
+  .nav .nav-item:not(:first-child) {
+    margin-left: 16px;
+  }
+}
 /*# sourceMappingURL=Navbar.css.map */
