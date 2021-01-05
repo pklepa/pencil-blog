@@ -27,8 +27,9 @@ function App() {
 
   useEffect(() => {
     client
-      .getEntries({ content_type: "blogPost" })
+      .getEntries({ content_type: "blogPost", order: "-sys.createdAt" })
       .then((response) => {
+        console.log(response.items);
         setArticles(response.items);
       })
       .catch(console.error);
