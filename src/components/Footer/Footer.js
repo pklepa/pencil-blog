@@ -9,13 +9,13 @@ function Footer() {
       <div className="container footer-container">
         <p>Design by @{format(new Date(), "yyyy")} Logworks.</p>
         <div className="footer-nav">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="https://google.com">Home</a>
+          <a href="https://google.com">About</a>
+          <a href="https://google.com">Contact</a>
         </div>
         <p>
           Made by{" "}
-          <a href="https://github.com/pklepa" target="_blank">
+          <a href="https://github.com/pklepa" target="_blank" rel="noreferrer">
             pklepa
           </a>
         </p>

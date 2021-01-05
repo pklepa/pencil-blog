@@ -25,7 +25,89 @@
   }
 
   .side-nav-container {
-    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    align-self: flex-start;
+    min-height: 620px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    .author-preview {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .preview-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .profile-pic {
+          width: 96px;
+          height: 96px;
+          border-radius: 50%;
+          background-color: $grey;
+          background-position: center center;
+          background-size: cover;
+
+          margin-right: 12px;
+        }
+
+        h1 {
+          font-weight: bold;
+          font-size: 16px;
+          color: $black;
+        }
+
+        span {
+          color: $mid-grey;
+        }
+      }
+
+      .preview-description {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .preview-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        border-top: 1px solid #d3d3d3;
+        margin-top: 15px;
+        padding-top: 15px;
+
+        span {
+          font-size: 12px;
+        }
+
+        .social-media-icons {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+
+        .social-media-icon {
+          width: 34px;
+          height: 34px;
+          border: 1px solid #d3d3d3;
+          margin-left: 6px;
+          background-size: 20px 20px;
+          background-position: center;
+          background-image: url("/src/assets/images/twitter-logo-24.png");
+          background-repeat: no-repeat;
+          transition: 0.2s;
+
+          &:hover {
+            background-size: 24px 24px;
+          }
+        }
+      }
+    }
   }
 }
