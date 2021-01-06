@@ -1,14 +1,17 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
 import "./assets/styles/reset.css";
 import "./assets/styles/global.css";
 
-import HomePage from "./views/HomePage/HomePage";
+import Routes from "./Routes";
 
 function App() {
   return (
     <>
-      <HomePage />
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     </>
   );
 }

@@ -1,8 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./Button.css";
 
-function Button({ children }) {
-  return <button className="btn">{children}</button>;
+function Button({ children, href }) {
+  return (
+    <Link to={href} className="btn">
+      {children}
+    </Link>
+  );
 }
 
 export default Button;

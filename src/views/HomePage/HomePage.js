@@ -67,6 +67,7 @@ function HomePage() {
             content={articles[0].fields.content}
             author={articles[0].fields.author.fields.name}
             date={articles[0].sys.createdAt}
+            articleId={articles[0].sys.id}
           />
         )}
 
@@ -84,6 +85,7 @@ function HomePage() {
                       content={article.fields.content}
                       author={article.fields.author.fields.name}
                       date={article.sys.createdAt}
+                      articleId={article.sys.id}
                     />
                   )
                 );

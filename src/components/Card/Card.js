@@ -1,10 +1,23 @@
 import React from "react";
 import { format } from "date-fns";
-import Button from "../Button/Button";
+import { Link } from "react-router-dom";
+
 import "./Card.css";
 
-function Card({ isFeatured, title, imgUrl, tag, content, author, date }) {
+import Button from "../Button/Button";
+
+function Card({
+  isFeatured,
+  title,
+  imgUrl,
+  tag,
+  content,
+  author,
+  date,
+  articleId,
+}) {
   const formattedDate = format(new Date(date), "MMMM d, yyyy");
+  console.log("receivedId: ", articleId);
 
   return (
     <div className={`card ${isFeatured && "featured-card"}`}>
@@ -24,7 +37,7 @@ function Card({ isFeatured, title, imgUrl, tag, content, author, date }) {
           Posted by <strong>{author}</strong>, on {formattedDate}
         </span>
 
-        <Button>Continue reading</Button>
+        <Button href={`/article/${articleId}`}>Continue reading</Button>
       </div>
     </div>
   );
