@@ -1,4 +1,5 @@
 import React from "react";
+import Article from "../../components/Article/Article";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
@@ -7,7 +8,8 @@ function ArticlePage({ articleId }) {
     <div className="App">
       <Navbar />
 
-      <h1>hello mundo from {articleId}</h1>
+      <Article />
+
       <Footer />
     </div>
   );
