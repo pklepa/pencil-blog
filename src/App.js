@@ -24,6 +24,7 @@ const SOCIAL_MEDIA_IMG_MAP = {
 function App() {
   const [articles, setArticles] = useState(false);
   const [mainAuthor, setMainAuthor] = useState(false);
+  const [categories, setCategories] = useState(false);
 
   useEffect(() => {
     client
@@ -40,6 +41,19 @@ function App() {
         setMainAuthor(res.fields);
       })
       .catch(console.error);
+
+    client
+      .getEntries({ content_type: "category" })
+      .then((response) => {
+        console.log(response.items);
+
+        // Order categories alphabetically
+        response.items.sort((a, b) =>
+          a.fields.name.localeCompare(b.fields.name)
+        );
+        setCategories(response.items);
+      })
+      .catch(console.error);
   }, []);
 
   return (
@@ -52,7 +66,7 @@ function App() {
             isFeatured
             title={articles[0].fields.title}
             imgUrl={articles[0].fields.featuredImage.fields.file.url}
-            tag={articles[0].fields.category[0]}
+            tag={articles[0].fields.categories[0].fields.name}
             content={articles[0].fields.content}
             author={articles[0].fields.author.fields.name}
             date={articles[0].sys.createdAt}
@@ -69,7 +83,7 @@ function App() {
                       key={`card-${index}`}
                       title={article.fields.title}
                       imgUrl={article.fields.featuredImage.fields.file.url}
-                      tag={article.fields.category[0]}
+                      tag={article.fields.categories[0].fields.name}
                       content={article.fields.content}
                       author={article.fields.author.fields.name}
                       date={article.sys.createdAt}
@@ -124,12 +138,12 @@ function App() {
               <h1>Tags</h1>
 
               <div className="tags-container">
-                <span>tag</span>
-                <span>tag</span>
-                <span>tag</span>
-                <span>tag</span>
-                <span>tag</span>
-                <span>tag</span>
+                {categories &&
+                  categories.map((category, index) => {
+                    return (
+                      <span key={`tag-${index}`}>{category.fields.name}</span>
+                    );
+                  })}
               </div>
             </div>
           </nav>

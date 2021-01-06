@@ -159,7 +159,7 @@
 }
 
 .inner-grid .side-nav-container .sidebar-content .tags-container {
-  --gap: 10px;
+  --gap: 8px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -171,7 +171,8 @@
 
 .inner-grid .side-nav-container .sidebar-content .tags-container > span {
   margin: var(--gap) 0 0 var(--gap);
-  padding: 10px 12px;
+  padding: 8px 10px;
+  font-size: 12px;
   background-color: #e5e5e5;
 }
 /*# sourceMappingURL=Main.css.map */
