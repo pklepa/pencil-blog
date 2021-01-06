@@ -1,0 +1,72 @@
+@import "../../assets/styles/colors";
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  padding: 60px 0;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 50%;
+  margin: 0 auto;
+}
+
+.article-title {
+  font-size: 48px;
+  line-height: 1em;
+  color: $black;
+
+  margin-bottom: 30px;
+}
+
+.author-details-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .author-profile-pic {
+    background-color: $grey;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+
+    margin-right: 12px;
+
+    flex-shrink: 0;
+  }
+
+  .author-details-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .author-details-left {
+    display: flex;
+    flex-direction: column;
+
+    .author-name {
+      font-size: 16px;
+      color: $black;
+    }
+  }
+}
+
+.featured-image {
+  width: 100%;
+  height: 550px;
+  margin-top: 60px;
+
+  background-color: $grey;
+  background-position: center center;
+  background-size: cover;
+}
