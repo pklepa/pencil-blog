@@ -8,7 +8,7 @@ function ArticlePage({ articleId }) {
     <div className="App">
       <Navbar />
 
-      <Article />
+      <Article articleId={articleId} />
 
       <Footer />
     </div>

@@ -42,8 +42,6 @@ function HomePage() {
     client
       .getEntries({ content_type: "category" })
       .then((response) => {
-        console.log(response.items);
-
         // Order categories alphabetically
         response.items.sort((a, b) =>
           a.fields.name.localeCompare(b.fields.name)

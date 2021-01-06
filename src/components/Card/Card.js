@@ -1,6 +1,5 @@
 import React from "react";
 import { format } from "date-fns";
-import { Link } from "react-router-dom";
 
 import "./Card.css";
 
@@ -17,7 +16,6 @@ function Card({
   articleId,
 }) {
   const formattedDate = format(new Date(date), "MMMM d, yyyy");
-  console.log("receivedId: ", articleId);
 
   return (
     <div className={`card ${isFeatured && "featured-card"}`}>

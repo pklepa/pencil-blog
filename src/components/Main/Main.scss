@@ -88,29 +88,6 @@
         span {
           font-size: 12px;
         }
-
-        .social-media-icons {
-          flex: 1;
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-        }
-
-        .social-media-icon {
-          width: 34px;
-          height: 34px;
-          border: 1px solid #d3d3d3;
-          margin-left: 6px;
-          background-size: 20px 20px;
-          background-position: center;
-          background-image: url("/src/assets/images/twitter-logo-24.png");
-          background-repeat: no-repeat;
-          transition: 0.2s;
-
-          &:hover {
-            background-size: 24px 24px;
-          }
-        }
       }
     }
 
@@ -138,5 +115,28 @@
         }
       }
     }
+  }
+}
+
+.social-media-icons {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.social-media-icon {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d3d3d3;
+  margin-left: 6px;
+  background-size: 20px 20px;
+  background-position: center;
+  background-image: url("/src/assets/images/twitter-logo-24.png");
+  background-repeat: no-repeat;
+  transition: 0.2s;
+
+  &:hover {
+    background-size: 24px 24px;
   }
 }
