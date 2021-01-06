@@ -23,12 +23,19 @@ function HomePage() {
   const [articles, setArticles] = useState(false);
   const [mainAuthor, setMainAuthor] = useState(false);
   const [categories, setCategories] = useState(false);
+  const [limit, setLimit] = useState(7);
+  const [total, setTotal] = useState(7);
 
   useEffect(() => {
     client
-      .getEntries({ content_type: "blogPost", order: "-sys.createdAt" })
+      .getEntries({
+        content_type: "blogPost",
+        order: "-sys.createdAt",
+        limit: limit,
+      })
       .then((response) => {
-        console.log(response.items);
+        console.log(response);
+        setTotal(response.total);
         setArticles(response.items);
       })
       .catch(console.error);
@@ -50,7 +57,7 @@ function HomePage() {
         setCategories(response.items);
       })
       .catch(console.error);
-  }, []);
+  }, [limit]);
 
   return (
     <div className="App">
@@ -147,14 +154,16 @@ function HomePage() {
           </nav>
         </div>
 
-        <div className="load-btn-wrapper">
-          <button
-            className="btn secondary"
-            onClick={() => console.log("hello")}
-          >
-            Load more
-          </button>
-        </div>
+        {limit < total && (
+          <div className="load-btn-wrapper">
+            <button
+              className="btn secondary"
+              onClick={() => setLimit(limit + 6)}
+            >
+              Load more
+            </button>
+          </div>
+        )}
       </Main>
 
       <Footer />
