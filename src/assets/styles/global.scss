@@ -20,3 +20,14 @@
   padding-right: 15px !important;
   flex: 1;
 }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: $lightest-grey;
+  background: #67b8ee;
+}
+
+::selection {
+  color: $lightest-grey;
+  background: #67b8ee;
+}

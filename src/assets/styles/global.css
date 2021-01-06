@@ -25,4 +25,15 @@
       -ms-flex: 1;
           flex: 1;
 }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #f5f5f5;
+  background: #67b8ee;
+}
+
+::selection {
+  color: #f5f5f5;
+  background: #67b8ee;
+}
 /*# sourceMappingURL=global.css.map */
