@@ -10,6 +10,7 @@ import TwitterLogo from "../../assets/images/bxl-twitter.svg";
 import YoutubeLogo from "../../assets/images/bxl-youtube.svg";
 import InstagramLogo from "../../assets/images/bxl-instagram.svg";
 import PinterestLogo from "../../assets/images/bxl-pinterest.svg";
+import Button from "../../components/Button/Button";
 
 const SOCIAL_MEDIA_IMG_MAP = {
   instagram: InstagramLogo,
@@ -144,6 +145,15 @@ function HomePage() {
               </div>
             </div>
           </nav>
+        </div>
+
+        <div className="load-btn-wrapper">
+          <button
+            className="btn secondary"
+            onClick={() => console.log("hello")}
+          >
+            Load more
+          </button>
         </div>
       </Main>
 

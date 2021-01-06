@@ -6,5 +6,12 @@
   text-align: center;
   color: #fff;
   font-weight: 600;
+  cursor: pointer !important;
+}
+
+.btn.secondary {
+  background-color: #f2f2f2;
+  color: #aeb3bb;
+  border: 2px solid #aeb3bb;
 }
 /*# sourceMappingURL=Button.css.map */

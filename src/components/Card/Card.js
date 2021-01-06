@@ -6,6 +6,7 @@ import { htmlToText } from "html-to-text";
 import "./Card.css";
 
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 function Card({
   isFeatured,

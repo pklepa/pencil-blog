@@ -5,7 +5,7 @@ import "./Button.css";
 
 function Button({ children, href }) {
   return (
-    <Link to={href} className="btn">
+    <Link className="btn" to={href}>
       {children}
     </Link>
   );

@@ -140,3 +140,13 @@
     background-size: 24px 24px;
   }
 }
+
+.load-btn-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $grey;
+  margin-top: 60px;
+  margin-right: 300px;
+}
