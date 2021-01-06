@@ -1,5 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
+import { Link } from "react-router-dom";
 
 import "./Footer.css";
 
@@ -9,9 +10,9 @@ function Footer() {
       <div className="container footer-container">
         <p>Design by @{format(new Date(), "yyyy")} Logworks.</p>
         <div className="footer-nav">
-          <a href="https://google.com">Home</a>
-          <a href="https://google.com">About</a>
-          <a href="https://google.com">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
         </div>
         <p>
           Made by{" "}

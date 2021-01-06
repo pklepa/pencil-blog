@@ -29,9 +29,15 @@
 
   .nav-item {
     font-family: "Open Sans", sans-serif;
+    color: $grey;
+    padding: 8px 16px;
+    background-color: $background;
 
-    &:not(:first-child) {
-      margin-left: 36px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $lighter-grey;
+      color: #999;
     }
   }
 }
@@ -45,11 +51,7 @@
     display: none;
   }
 
-  .logo {
-    margin-left: 16px;
-  }
-
-  .nav .nav-item:not(:first-child) {
-    margin-left: 16px;
+  .nav-item {
+    padding: 8px;
   }
 }
