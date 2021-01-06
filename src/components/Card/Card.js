@@ -1,5 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
+import marked from "marked";
+import { htmlToText } from "html-to-text";
 
 import "./Card.css";
 
@@ -29,7 +31,9 @@ function Card({
 
         <h1 className="title">{title}</h1>
 
-        <p className="content-preview">{content}</p>
+        <p className="content-preview">
+          {htmlToText(marked(content), { baseElement: "p" })}
+        </p>
 
         <span className="post-details">
           Posted by <strong>{author}</strong>, on {formattedDate}
