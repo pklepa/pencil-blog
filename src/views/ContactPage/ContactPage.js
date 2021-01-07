@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import Modal from "../../components/Modal/Modal";
 
 import Hero from "../../assets/images/contact-dog.jpg";
 
@@ -41,12 +42,7 @@ function ContactPage() {
       <Navbar />
 
       <div className="container contact-container">
-        <div
-          className="hero-image"
-          // styles={{ backgroundImage: `url(${Hero})` }}
-        >
-          {" "}
-        </div>
+        <div className="hero-image"></div>
         <div className="form-wrapper">
           <form className="contact-form" onSubmit={sendEmail}>
             <h1>Contact Us </h1>
@@ -78,20 +74,9 @@ function ContactPage() {
 
       <Footer />
 
-      <div
-        className={`contact-modal ${showModal ? "" : "hidden"}`}
-        onClick={() => setShowModal(false)}
-      >
-        <div className="modal-content">
-          Thank you for getting in touch!
-          <span
-            className="close-modal noselect"
-            onClick={() => setShowModal(false)}
-          >
-            X
-          </span>
-        </div>
-      </div>
+      <Modal showModal={showModal} setShowModal={setShowModal}>
+        Thank you for getting in touch!
+      </Modal>
     </div>
   );
 }
