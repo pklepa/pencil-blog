@@ -9,6 +9,7 @@ import YoutubeLogo from "../../assets/images/bxl-youtube.svg";
 import InstagramLogo from "../../assets/images/bxl-instagram.svg";
 import PinterestLogo from "../../assets/images/bxl-pinterest.svg";
 import ArticleContent from "../ArticleContent/ArticleContent";
+import Modal from "../../components/Modal/Modal";
 
 const SOCIAL_MEDIA_IMG_MAP = {
   instagram: InstagramLogo,
@@ -20,6 +21,7 @@ const SOCIAL_MEDIA_IMG_MAP = {
 function Article({ articleId }) {
   const [article, setArticle] = useState(false);
   const [articleAuthor, setArticleAuthor] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     client
@@ -80,12 +82,29 @@ function Article({ articleId }) {
               </div>
             </div>
           </header>
+
           <div
             className="featured-image"
             style={{
               backgroundImage: `url("${article.fields.featuredImage.fields.file.url}")`,
             }}
+            onClick={() => setShowModal(true)}
           ></div>
+
+          <Modal showModal={showModal} setShowModal={setShowModal}>
+            <div
+              className="full-screen-image"
+              style={{
+                backgroundImage: `url("${article.fields.featuredImage.fields.file.url}")`,
+              }}
+            ></div>
+            {/* 
+            <img
+              src={article.fields.featuredImage.fields.file.url}
+              alt="Article featured image"
+              className="full-screen-image"
+            /> */}
+          </Modal>
 
           <ArticleContent content={article.fields.content} />
         </>
