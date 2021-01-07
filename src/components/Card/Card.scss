@@ -6,6 +6,7 @@
   height: 620px;
   min-width: 270px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: transform 0.4s;
 
   .img-wrapper {
     background-color: $light-grey;
@@ -22,6 +23,10 @@
     .card-details {
       max-width: 300px;
     }
+  }
+
+  &:not(.featured-card):hover {
+    transform: translateY(-10px);
   }
 }
 

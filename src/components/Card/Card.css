@@ -10,6 +10,10 @@
   min-width: 270px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .card .img-wrapper {
@@ -32,6 +36,11 @@
 
 .card.featured-card .card-details {
   max-width: 300px;
+}
+
+.card:not(.featured-card):hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .card-details {

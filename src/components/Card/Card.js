@@ -3,11 +3,9 @@ import { format } from "date-fns";
 import marked from "marked";
 import { htmlToText } from "html-to-text";
 
-import "./Card.css";
-
-import Button from "../Button/Button";
-import { Link } from "react-router-dom";
 import LinkButton from "../LinkButton/LinkButton";
+
+import "./Card.css";
 
 function Card({
   isFeatured,
