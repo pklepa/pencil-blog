@@ -15,6 +15,11 @@
   color: #666;
   font: normal 14px "Mulish";
   line-height: 1.5em;
+  position: relative;
+}
+
+.App.full-screen {
+  height: 100vh;
 }
 
 .container {
