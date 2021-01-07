@@ -1,0 +1,35 @@
+@import "../../assets/styles/colors";
+
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 700px;
+  margin-top: 60px;
+
+  .about-profile-pic {
+    background-color: $grey;
+    background-position: center center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    color: $black;
+    font-size: 22px;
+    line-height: 1.5em;
+  }
+
+  span {
+    color: $light-grey;
+    margin-bottom: 12px;
+  }
+
+  & > .social-media-icons {
+    margin: 20px 0 60px;
+  }
+}

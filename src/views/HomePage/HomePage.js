@@ -10,7 +10,6 @@ import TwitterLogo from "../../assets/images/bxl-twitter.svg";
 import YoutubeLogo from "../../assets/images/bxl-youtube.svg";
 import InstagramLogo from "../../assets/images/bxl-instagram.svg";
 import PinterestLogo from "../../assets/images/bxl-pinterest.svg";
-import Button from "../../components/Button/Button";
 
 const SOCIAL_MEDIA_IMG_MAP = {
   instagram: InstagramLogo,
