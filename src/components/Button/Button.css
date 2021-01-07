@@ -5,18 +5,12 @@
   background-color: #f2f2f2;
   padding: 16px;
   width: 100%;
-  border: 4px solid #171717;
+  border: none;
   text-align: center;
   color: #171717;
   font-weight: bold;
   cursor: pointer !important;
   overflow: hidden;
-}
-
-.btn.secondary {
-  background-color: #f2f2f2;
-  color: #aeb3bb;
-  border: 2px solid #aeb3bb;
 }
 
 .btn .btn-animated-background {
@@ -44,5 +38,26 @@
 .btn:hover .btn-animated-background {
   -webkit-transform: translateY(calc(100% + 4px));
           transform: translateY(calc(100% + 4px));
+}
+
+.btn.secondary {
+  background-color: #f2f2f2;
+  color: #aeb3bb;
+  border: 2px dashed #aeb3bb;
+  -webkit-transition: border-color 0.4s;
+  transition: border-color 0.4s;
+}
+
+.btn.secondary .btn-animated-background {
+  bottom: calc(100% + 4px);
+}
+
+.btn.secondary:hover .btn-animated-background {
+  -webkit-transform: translateY(calc(100% + 4px));
+          transform: translateY(calc(100% + 4px));
+}
+
+.btn.secondary:hover {
+  border-color: #f2f2f2;
 }
 /*# sourceMappingURL=Button.css.map */

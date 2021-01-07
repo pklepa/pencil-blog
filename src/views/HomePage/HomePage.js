@@ -10,6 +10,7 @@ import TwitterLogo from "../../assets/images/bxl-twitter.svg";
 import YoutubeLogo from "../../assets/images/bxl-youtube.svg";
 import InstagramLogo from "../../assets/images/bxl-instagram.svg";
 import PinterestLogo from "../../assets/images/bxl-pinterest.svg";
+import Button from "../../components/Button/Button";
 
 const SOCIAL_MEDIA_IMG_MAP = {
   instagram: InstagramLogo,
@@ -155,12 +156,9 @@ function HomePage() {
 
         {limit < total && (
           <div className="load-btn-wrapper">
-            <button
-              className="btn secondary"
-              onClick={() => setLimit(limit + 6)}
-            >
+            <Button secondary onClick={() => setLimit(limit + 6)}>
               Load more
-            </button>
+            </Button>
           </div>
         )}
       </Main>

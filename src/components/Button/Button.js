@@ -1,14 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import "./Button.css";
 
-function Button({ children, href }) {
+function Button({ children, secondary, onClick, type }) {
   return (
-    <Link className="btn" to={href}>
+    <button
+      type={type && type}
+      className={`btn ${secondary && "secondary"}`}
+      onClick={onClick && onClick}
+    >
       {children}
       <span className="btn-animated-background">{children}</span>
-    </Link>
+    </button>
   );
 }
 

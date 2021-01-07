@@ -7,19 +7,13 @@
   background-color: $background;
   padding: 16px;
   width: 100%;
-  border: 4px solid $black;
+  border: none;
 
   text-align: center;
   color: $black;
   font-weight: bold;
   cursor: pointer !important;
   overflow: hidden;
-
-  &.secondary {
-    background-color: $background;
-    color: $light-grey;
-    border: 2px solid $light-grey;
-  }
 
   .btn-animated-background {
     position: absolute;
@@ -39,5 +33,23 @@
 
   &:hover .btn-animated-background {
     transform: translateY(calc(100% + 4px));
+  }
+
+  &.secondary {
+    background-color: $background;
+    color: $light-grey;
+    border: 2px dashed $light-grey;
+    transition: border-color 0.4s;
+
+    .btn-animated-background {
+      bottom: calc(100% + 4px);
+    }
+
+    &:hover .btn-animated-background {
+      transform: translateY(calc(100% + 4px));
+    }
+    &:hover {
+      border-color: $background;
+    }
   }
 }

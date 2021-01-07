@@ -7,6 +7,7 @@ import "./Card.css";
 
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
+import LinkButton from "../LinkButton/LinkButton";
 
 function Card({
   isFeatured,
@@ -40,7 +41,7 @@ function Card({
           Posted by <strong>{author}</strong>, on {formattedDate}
         </span>
 
-        <Button href={`/article/${articleId}`}>Continue reading</Button>
+        <LinkButton href={`/article/${articleId}`}>Continue reading</LinkButton>
       </div>
     </div>
   );

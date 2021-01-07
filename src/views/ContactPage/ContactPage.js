@@ -4,8 +4,7 @@ import emailjs from "emailjs-com";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Modal from "../../components/Modal/Modal";
-
-import Hero from "../../assets/images/contact-dog.jpg";
+import Button from "../../components/Button/Button";
 
 import "./ContactPage.css";
 
@@ -65,9 +64,7 @@ function ContactPage() {
               <span className="underline"></span>
             </div>
 
-            <button type="submit" className="btn">
-              Send message
-            </button>
+            <Button type="submit">Send message</Button>
           </form>
         </div>
       </div>
