@@ -39,8 +39,8 @@
 }
 
 .card:not(.featured-card):hover {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 
 .card-details {
