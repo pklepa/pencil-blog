@@ -10,7 +10,7 @@ import Hero from "../../assets/images/contact-dog.jpg";
 import "./ContactPage.css";
 
 function ContactPage() {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   function sendEmail(e) {
     e.preventDefault();

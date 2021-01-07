@@ -1,17 +1,48 @@
 .btn {
-  background-color: #171717;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f2f2f2;
   padding: 16px;
   width: 100%;
-  border: none;
+  border: 4px solid #171717;
   text-align: center;
-  color: #fff;
-  font-weight: 600;
+  color: #171717;
+  font-weight: bold;
   cursor: pointer !important;
+  overflow: hidden;
 }
 
 .btn.secondary {
   background-color: #f2f2f2;
   color: #aeb3bb;
   border: 2px solid #aeb3bb;
+}
+
+.btn .btn-animated-background {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: #171717;
+  color: #fff;
+  font-weight: normal;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.btn:hover .btn-animated-background {
+  -webkit-transform: translateY(calc(100% + 4px));
+          transform: translateY(calc(100% + 4px));
 }
 /*# sourceMappingURL=Button.css.map */
