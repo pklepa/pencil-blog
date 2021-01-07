@@ -14,21 +14,100 @@
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  background-color: #666;
+  background-color: #f2f2f2;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-image: url("../../assets/images/contact-dog.jpg");
 }
 
 .contact-container .contact-form {
   height: 100%;
   width: 100%;
-  background-color: aquamarine;
-}
-
-.contact-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 15px;
+}
+
+.contact-container .contact-form h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.contact-container .contact-form .input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-container .contact-form .input-wrapper .underline {
+  position: absolute;
+  bottom: 0px;
+  width: 0px;
+  height: 2px;
+  background-color: #666;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 10;
+}
+
+.contact-container .contact-form label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.contact-container .contact-form input,
+.contact-container .contact-form textarea {
+  font-size: 14px;
+  padding: 8px 0;
+  width: 400px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  outline: none;
+}
+
+.contact-container .contact-form input:focus,
+.contact-container .contact-form input :active,
+.contact-container .contact-form textarea:focus,
+.contact-container .contact-form textarea :active {
+  border-bottom-color: #f2f2f2;
+}
+
+.contact-container .contact-form input:focus + .underline,
+.contact-container .contact-form input :active + .underline,
+.contact-container .contact-form textarea:focus + .underline,
+.contact-container .contact-form textarea :active + .underline {
+  width: 100%;
+}
+
+.contact-container .contact-form textarea {
+  max-width: 400px;
+  min-width: 400px;
+  min-height: 40px;
+  max-height: 180px;
+}
+
+.contact-container .contact-form button {
+  margin-top: 40px;
 }
 /*# sourceMappingURL=ContactPage.css.map */

@@ -11,23 +11,80 @@
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    background-color: $grey;
+    background-color: $background;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-image: url("../../assets/images/contact-dog.jpg");
   }
 
   .contact-form {
     height: 100%;
     width: 100%;
-    background-color: aquamarine;
-  }
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
 
-.contact-grid {
-  display: flex;
-  // flex: 1;
-  // display: grid;
-  // grid-template-columns: 200px 400px;
-  // max-height: 60vh;
+    h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .input-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      position: relative;
+
+      .underline {
+        position: absolute;
+        bottom: 0px;
+        width: 0px;
+        height: 2px;
+        background-color: $grey;
+        transition: 0.4s;
+        z-index: 10;
+      }
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: bold;
+      color: $grey;
+      text-transform: uppercase;
+    }
+
+    input,
+    textarea {
+      font-size: 14px;
+      padding: 8px 0;
+      width: 400px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid $lighter-grey;
+      outline: none;
+
+      &:focus,
+      :active {
+        border-bottom-color: $background;
+
+        & + .underline {
+          width: 100%;
+        }
+      }
+    }
+
+    textarea {
+      max-width: 400px;
+      min-width: 400px;
+      min-height: 40px;
+      max-height: 180px;
+    }
+
+    button {
+      margin-top: 40px;
+    }
+  }
 }

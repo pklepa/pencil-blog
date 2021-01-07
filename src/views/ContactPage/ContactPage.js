@@ -35,17 +35,33 @@ function ContactPage() {
 
       <div className="container contact-container">
         <div className="hero-image"></div>
+        <div className="form-wrapper">
+          <form className="contact-form" onSubmit={sendEmail}>
+            <h1>Contact Us </h1>
 
-        <form className="contact-form" onSubmit={sendEmail}>
-          <input type="hidden" name="contact_number" />
-          <label>Name</label>
-          <input type="text" name="name" />
-          <label>Email</label>
-          <input type="email" name="reply_email" />
-          <label>Message</label>
-          <textarea name="message" />
-          <input type="submit" value="Send" />
-        </form>
+            <div className="input-wrapper">
+              <label>Name</label>
+              <input type="text" name="name" required />
+              <span className="underline"></span>
+            </div>
+
+            <div className="input-wrapper">
+              <label>Email</label>
+              <input type="email" name="reply_email" required />
+              <span className="underline"></span>
+            </div>
+
+            <div className="input-wrapper">
+              <label>Message</label>
+              <textarea name="message" required />
+              <span className="underline"></span>
+            </div>
+
+            <button type="submit" className="btn">
+              Send message
+            </button>
+          </form>
+        </div>
       </div>
 
       <Footer />
