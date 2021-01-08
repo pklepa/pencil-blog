@@ -1,15 +1,15 @@
 import React from "react";
 import Article from "../../components/Article/Article";
+import FacebookComments from "../../components/FacebookComments/FacebookComments";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-import FBCommentsContainer from "../FBCommentsContainer/FBCommentsContainer";
 
 import useWindowDimensions from "../../assets/utils/useWindowDimensions";
 
 import "./ArticlePage.css";
 
 function ArticlePage({ articleId }) {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <div className="App">
@@ -17,7 +17,7 @@ function ArticlePage({ articleId }) {
 
       <Article articleId={articleId} />
 
-      <FBCommentsContainer
+      <FacebookComments
         url={`https://localhost:3000/article/${articleId}`}
         width={width}
       />

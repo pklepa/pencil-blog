@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FacebookProvider, Comments } from "react-facebook";
 
-export default class FBCommentsContainer extends Component {
+export default class FacebookComments extends Component {
   constructor(props) {
     super();
 
