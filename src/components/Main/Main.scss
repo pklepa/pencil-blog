@@ -107,11 +107,18 @@
         margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
         width: calc(100% + var(--gap));
 
-        & > span {
+        & > .tag {
           margin: var(--gap) 0 0 var(--gap);
           padding: 8px 10px;
           font-size: 12px;
+          color: $grey;
           background-color: $lighter-grey;
+          transition: 0.2s;
+
+          &:hover {
+            color: $deep-white;
+            background-color: $black;
+          }
         }
       }
     }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../../client";
+import { Link } from "react-router-dom";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Main from "../../components/Main/Main";
@@ -146,7 +147,13 @@ function HomePage() {
                 {categories &&
                   categories.map((category, index) => {
                     return (
-                      <span key={`tag-${index}`}>{category.fields.name}</span>
+                      <Link
+                        to="/categories"
+                        className="tag"
+                        key={`tag-${index}`}
+                      >
+                        {category.fields.name}
+                      </Link>
                     );
                   })}
               </div>

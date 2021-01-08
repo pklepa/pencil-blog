@@ -137,11 +137,19 @@
   width: calc(100% + var(--gap));
 }
 
-.inner-grid .side-nav-container .sidebar-content .tags-container > span {
+.inner-grid .side-nav-container .sidebar-content .tags-container > .tag {
   margin: var(--gap) 0 0 var(--gap);
   padding: 8px 10px;
   font-size: 12px;
+  color: #666;
   background-color: #e5e5e5;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.inner-grid .side-nav-container .sidebar-content .tags-container > .tag:hover {
+  color: #fff;
+  background-color: #171717;
 }
 
 .social-media-icons {
