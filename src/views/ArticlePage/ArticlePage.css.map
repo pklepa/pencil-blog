@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,aAAa,EAAE,IAAI;CACpB",
+    "sources": [
+        "ArticlePage.scss"
+    ],
+    "names": [],
+    "file": "ArticlePage.css"
+}
