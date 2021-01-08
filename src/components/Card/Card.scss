@@ -15,18 +15,20 @@
     flex: 1;
   }
 
-  &.featured-card {
-    height: 550px;
-    flex-direction: row;
-    width: 100%;
-
-    .card-details {
-      max-width: 300px;
-    }
-  }
-
   &:not(.featured-card):hover {
     transform: translateY(-6px);
+  }
+
+  @media screen and (min-width: 850px) {
+    &.featured-card {
+      height: 550px;
+      flex-direction: row;
+      width: 100%;
+
+      .card-details {
+        max-width: 300px;
+      }
+    }
   }
 }
 

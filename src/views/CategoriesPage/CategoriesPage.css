@@ -17,7 +17,7 @@
           justify-content: center;
 }
 
-.articles-container {
+.categories-container .articles-container {
   margin: 60px 0 0;
 }
 /*# sourceMappingURL=CategoriesPage.css.map */

@@ -25,22 +25,23 @@
           flex: 1;
 }
 
-.card.featured-card {
-  height: 550px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-}
-
-.card.featured-card .card-details {
-  max-width: 300px;
-}
-
 .card:not(.featured-card):hover {
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
+}
+
+@media screen and (min-width: 850px) {
+  .card.featured-card {
+    height: 550px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .card.featured-card .card-details {
+    max-width: 300px;
+  }
 }
 
 .card-details {
