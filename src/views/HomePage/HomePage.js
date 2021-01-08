@@ -27,7 +27,9 @@ function HomePage() {
   const [limit, setLimit] = useState(7);
   const [total, setTotal] = useState(7);
 
+  // Listens for limit changes in order to update the articles displayed
   useEffect(() => {
+    // Fetch every blogPost up to the defined limit
     client
       .getEntries({
         content_type: "blogPost",
@@ -40,7 +42,11 @@ function HomePage() {
         setArticles(response.items);
       })
       .catch(console.error);
+  }, [limit]);
 
+  // Fetches the unique data when the component loads
+  useEffect(() => {
+    // Fetch the main author
     client
       .getEntry("LzXckKAx0cIhXvTdbsW23")
       .then((res) => {
@@ -48,6 +54,7 @@ function HomePage() {
       })
       .catch(console.error);
 
+    // Fetch every category for the tags sidebar
     client
       .getEntries({ content_type: "category" })
       .then((response) => {
@@ -58,7 +65,7 @@ function HomePage() {
         setCategories(response.items);
       })
       .catch(console.error);
-  }, [limit]);
+  }, []);
 
   return (
     <div className="App">
