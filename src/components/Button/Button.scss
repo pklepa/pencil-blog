@@ -32,7 +32,7 @@
   }
 
   &:hover .btn-animated-background {
-    transform: translateY(calc(100% + 4px));
+    transform: translateY((calc(-4px - 100%)));
   }
 
   &.secondary {

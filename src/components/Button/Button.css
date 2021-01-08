@@ -36,8 +36,8 @@
 }
 
 .btn:hover .btn-animated-background {
-  -webkit-transform: translateY(calc(100% + 4px));
-          transform: translateY(calc(100% + 4px));
+  -webkit-transform: translateY(calc(-4px - 100%));
+          transform: translateY(calc(-4px - 100%));
 }
 
 .btn.secondary {
