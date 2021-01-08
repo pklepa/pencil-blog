@@ -25,13 +25,19 @@ footer .footer-container a {
   font-weight: 500;
 }
 
-footer .footer-container .footer-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.footer-nav {
+  display: none;
 }
 
-footer .footer-container .footer-nav > a:not(:last-child) {
+.footer-nav > a:not(:last-child) {
   margin-right: 32px;
+}
+
+@media screen and (min-width: 650px) {
+  .footer-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=Footer.css.map */

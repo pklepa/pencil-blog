@@ -19,13 +19,19 @@ footer {
       color: $deep-white;
       font-weight: 500;
     }
+  }
+}
 
-    .footer-nav {
-      display: flex;
+.footer-nav {
+  display: none;
 
-      & > a:not(:last-child) {
-        margin-right: 32px;
-      }
-    }
+  & > a:not(:last-child) {
+    margin-right: 32px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .footer-nav {
+    display: flex;
   }
 }
