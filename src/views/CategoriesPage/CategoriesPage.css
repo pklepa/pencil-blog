@@ -9,7 +9,7 @@
   padding: 60px 0;
 }
 
-.tags-container {
+.categories-container .tags-container {
   max-width: 800px;
   margin: 0 auto;
   -webkit-box-pack: center;
