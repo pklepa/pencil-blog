@@ -1,0 +1,15 @@
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+}
+
+.tags-container {
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.articles-container {
+  margin: 60px 0 0;
+}

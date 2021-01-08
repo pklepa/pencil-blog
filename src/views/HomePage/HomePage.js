@@ -12,6 +12,7 @@ import YoutubeLogo from "../../assets/images/bxl-youtube.svg";
 import InstagramLogo from "../../assets/images/bxl-instagram.svg";
 import PinterestLogo from "../../assets/images/bxl-pinterest.svg";
 import Button from "../../components/Button/Button";
+import TagsContainer from "../../components/TagsContainer/TagsContainer";
 
 const SOCIAL_MEDIA_IMG_MAP = {
   instagram: InstagramLogo,
@@ -150,12 +151,12 @@ function HomePage() {
             <div className="sidebar-content">
               <h1>Tags</h1>
 
-              <div className="tags-container">
+              <TagsContainer>
                 {categories &&
                   categories.map((category, index) => {
                     return (
                       <Link
-                        to="/categories"
+                        to={`/category/${category.sys.id}`}
                         className="tag"
                         key={`tag-${index}`}
                       >
@@ -163,7 +164,7 @@ function HomePage() {
                       </Link>
                     );
                   })}
-              </div>
+              </TagsContainer>
             </div>
           </nav>
         </div>
