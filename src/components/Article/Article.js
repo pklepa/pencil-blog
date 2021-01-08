@@ -98,12 +98,6 @@ function Article({ articleId }) {
                 backgroundImage: `url("${article.fields.featuredImage.fields.file.url}")`,
               }}
             ></div>
-            {/* 
-            <img
-              src={article.fields.featuredImage.fields.file.url}
-              alt="Article featured image"
-              className="full-screen-image"
-            /> */}
           </Modal>
 
           <ArticleContent content={article.fields.content} />

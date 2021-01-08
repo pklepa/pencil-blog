@@ -7,13 +7,17 @@ export default class FBCommentsContainer extends Component {
 
     this.state = {
       url: props.url,
+      width: props.width,
     };
   }
 
   render() {
     return (
       <FacebookProvider appId={process.env.REACT_APP_FACEBOOK_APP_ID}>
-        <Comments href={this.state.url} width="700" />
+        <Comments
+          href={this.state.url}
+          width={Math.min(this.state.width - 20, 700)}
+        />
       </FacebookProvider>
     );
   }
